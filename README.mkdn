@@ -6,10 +6,12 @@
 
 # Initialize local repository
 
-Error 404 not found
+repo init -u https://github.com/ABC-WIP/manifest -b o
 
 # Sync
-repo sync -c -jx --force-sync --no-clone-bundle --no-tags
+
+repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -jX
+
 ```
 
 ### Preparing to Build ###
