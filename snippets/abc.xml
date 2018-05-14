@@ -57,7 +57,8 @@
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="abc"  />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="abc" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="abc" />
-  
+  <project path="packages/apps/Snap" name="packages_apps_Snap" remote="abc" />
+  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="abc" />   
   <!-- Dutils -->
   <project path="external/DUtils" name="external_DUtils" remote="abc" />	
 
