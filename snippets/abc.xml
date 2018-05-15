@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="abc"
+          fetch="https://github.com/ABC-ROM"
+          revision="o" />
+
+  <!-- General repos -->
+  <project path="bionic" name="bionic" remote="abc" />
+  <project path="build/make" name="build" remote="abc">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="abc">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="bootable/recovery" name="bootable_recovery" remote="abc" />
+  <project path="vendor/aosp" name="vendor_abc" remote="abc" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="abc" />
+  <project path="frameworks/base" name="frameworks_base" remote="abc" />
+  <project path="frameworks/native" name="frameworks_native" remote="abc" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="abc" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/custom-interfaces" name="hardware_custom-interfaces" remote="abc" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="abc" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="abc" />
+  <project path="hardware/qcom/msm8x84" name="hardware_qcom_msm8x84" remote="abc" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="abc" />
+  <project path="packages/apps/AbcSettings" name="packages_apps_AbcSettings" remote="abc" />
+  <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="abc" />
+  <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" remote="abc" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="abc" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="abc" />
+  <project path="packages/apps/DUI" name="packages_apps_DUI" remote="abc"  />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="abc"  />
+  <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="abc" />
+  <project path="packages/apps/MusicFX" name="packages_apps_MusicFX" groups="pdk-fs" remote="abc" />
+  <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" remote="abc" />
+  <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="abc" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="abc"  />
+  <project path="packages/apps/SlimRecents" name="packages_apps_SlimRecents" remote="abc"  />
+  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="abc" />
+  <project path="packages/apps/Stk" name="packages_apps_Stk" remote="abc" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="abc" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="abc" />
+  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="abc"  />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="abc" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="abc" />
+  
+  <!-- Dutils -->
+  <project path="external/DUtils" name="external_DUtils" remote="abc" />	
+
+  <!-- Sepolicy Repos -->
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="abc" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="abc" />
+
+  <!-- System Repos -->
+  <project path="system/core" name="system_core" remote="abc" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="abc" />
+  <project path="system/media" name="system_media" groups="pdk" remote="abc" />
+  <project path="system/hwservicemanager" name="system_hwservicemanager" remote="abc" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="abc" />
+  <project path="system/vold" name="system_vold" remote="abc" />
+
+  </manifest>
